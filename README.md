@@ -1,8 +1,3 @@
-Here is **one single, complete, clean Markdown README** with **everything consolidated**.
-You can copy-paste this **as-is** into `README.md`.
-
----
-
 # Explainable Semantic Search for Enterprise Knowledge Bases
 
 ## Overview
@@ -10,7 +5,7 @@ This project implements an **explainable, enterprise-grade semantic search syste
 
 The system retrieves **section-level evidence**, deduplicates results at the **document level**, prioritizes **actionable remediation**, filters weak matches, and **explicitly signals uncertainty** when relevance is partial.
 
-It is designed to be **trust-first**, conservative, and explainable  - not a hallucinating chatbot.
+It is designed to be **trust-first**, conservative, and explainable  - not a chatbot.
 
 ---
 
@@ -34,7 +29,7 @@ It is designed to be **trust-first**, conservative, and explainable  - not a hal
 data/
 └── docs/
 ├── pega_troubleshooting/     # Synthetic Pega developer KBs
-└── public_it_runbooks/       # Public IT runbooks (NIST-inspired)
+└── public_it_runbooks/       # Public IT runbooks inspired by NIST
 
 vector_store/
 ├── faiss.index
@@ -84,8 +79,6 @@ This ensures **actionable guidance is surfaced first** without ignoring diagnost
 | MEDIUM | Partial intent alignment; may require user judgment |
 | HIGH | Strong semantic and procedural alignment |
 
-The system **never inflates confidence**.
-
 ---
 
 ## Example API Response
@@ -113,13 +106,9 @@ The system **never inflates confidence**.
 
 ## Explainability Strategy
 
-Each response explains:
-
 * **Why this document was selected**
 * **Which section drove relevance**
 * **Why weaker documents were excluded**
-
-This reduces black-box behavior and increases user trust.
 
 ---
 
@@ -136,11 +125,10 @@ This reduces black-box behavior and increases user trust.
 ## Design Principles
 
 * Retrieval-first, not generation-first
-* No hallucination
 * Conservative confidence signaling
 * Explainability over completeness
 * Clear separation of concerns
-* Enterprise-safe behavior
+* Enterprise-safe design
 
 ---
 
@@ -148,18 +136,8 @@ This reduces black-box behavior and increases user trust.
 
 * Internal developer support assistants
 * IT / platform knowledge base search
-* GenAI “buddy” backends
-* Explainable semantic retrieval systems
-
----
-
-## What This Project Is *Not*
-
-* ❌ A chatbot that invents answers
-* ❌ A streaming ingestion pipeline
-* ❌ An autonomous reasoning agent
-
-This system prioritizes **correctness, transparency, and trust**.
+* GenAI agent backends
+* Semantic retrieval systems
 
 ---
 
@@ -178,18 +156,3 @@ Swagger UI:
 http://127.0.0.1:8000/docs
 ```
 
----
-
-## Why This Project Matters
-
-Most GenAI demos optimize for flash.
-This project optimizes for **real-world enterprise constraints**:
-
-* partial information
-* ambiguity
-* explainability
-* trust
-
-It reflects how **actual internal GenAI platforms** are built and evaluated.
-
----
